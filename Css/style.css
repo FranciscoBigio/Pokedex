@@ -1,0 +1,255 @@
+body {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url('FundoPokemonSite.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilização dos botões */
+.btn {
+    background-color: #ffcb05; /* Cor amarela vibrante */
+    color: #3b4cca; /* Cor azul escuro */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px; /* Botões arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3b4cca; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+/* Estilização especial para os botões de navegação */
+.navigation .btn {
+    background-color: #4caf50; /* Verde */
+}
+
+.navigation .btn:hover {
+    background-color: #388e3c; /* Verde escuro ao passar o mouse */
+}
+
+/* Estilos para a boxPkm */
+.boxPkm {
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid #3b4cca; /* Azul escuro */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 20px; /* Diminuir o padding */
+    margin-bottom: 5px; /* Diminuir o espaçamento inferior */
+    max-height: 280px;
+    max-width: 300px; /* Diminuir a largura da caixa */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container para imagem e nome do Pokémon */
+.pokemonImageContainer {
+    position: relative;
+    text-align: center;
+}
+
+.pokemonImageContainer h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.pokemonImageContainer img {
+    width: 180px; /* Ajuste o tamanho da imagem */
+    height: 180px; /* Ajuste o tamanho da imagem */
+}
+
+/* Estilos para detalhesExtras (caixa oculta/exibida) */
+#detalhesExtras {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid #3b4cca;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-height: 140px;
+    max-width: 300px; /* Largura semelhante ao boxPkm */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#detalhesExtras:hover {
+    transform: translateY(-10px); /* Animação ao passar o mouse */
+}
+
+/* Cores das caixas de tipos */
+.boxPkm[data-type="fire"] {
+    background-color: #f08030;
+}
+
+.boxPkm[data-type="water"] {
+    background-color: #6890f0;
+}
+
+.boxPkm[data-type="grass"] {
+    background-color: #78c850;
+}
+
+.boxPkm[data-type="electric"] {
+    background-color: #f8d030;
+}
+
+.boxPkm[data-type="ice"] {
+    background-color: #98d8d8;
+}
+
+.boxPkm[data-type="fighting"] {
+    background-color: #c03028;
+}
+
+.boxPkm[data-type="poison"] {
+    background-color: #a040a0;
+}
+
+.boxPkm[data-type="ground"] {
+    background-color: #e0c068;
+}
+
+.boxPkm[data-type="flying"] {
+    background-color: #a890f0;
+}
+
+.boxPkm[data-type="psychic"] {
+    background-color: #f85888;
+}
+
+.boxPkm[data-type="bug"] {
+    background-color: #a8b820;
+}
+
+.boxPkm[data-type="rock"] {
+    background-color: #b8a038;
+}
+
+.boxPkm[data-type="ghost"] {
+    background-color: #705898;
+}
+
+.boxPkm[data-type="dragon"] {
+    background-color: #7038f8;
+}
+
+.boxPkm[data-type="dark"] {
+    background-color: #705848;
+}
+
+.boxPkm[data-type="steel"] {
+    background-color: #b8b8d0;
+}
+
+.boxPkm[data-type="fairy"] {
+    background-color: #f0b6bc;
+}
+
+/* Cores dos detalhesExtras */
+.detalhesExtras[data-type="fire"] {
+    background-color: #fcb6a9;
+}
+
+.detalhesExtras[data-type="water"] {
+    background-color: #b0d4f4;
+}
+
+.detalhesExtras[data-type="grass"] {
+    background-color: #c1e1b5;
+}
+
+.detalhesExtras[data-type="electric"] {
+    background-color: #fbe5a3;
+}
+
+.detalhesExtras[data-type="ice"] {
+    background-color: #d8f5f5;
+}
+
+.detalhesExtras[data-type="fighting"] {
+    background-color: #f3b1a3;
+}
+
+.detalhesExtras[data-type="poison"] {
+    background-color: #e3b0e3;
+}
+
+.detalhesExtras[data-type="ground"] {
+    background-color: #f2e4c4;
+}
+
+.detalhesExtras[data-type="flying"] {
+    background-color: #d6d3f5;
+}
+
+.detalhesExtras[data-type="psychic"] {
+    background-color: #f8c0d3;
+}
+
+.detalhesExtras[data-type="bug"] {
+    background-color: #e8f3b0;
+}
+
+.detalhesExtras[data-type="rock"] {
+    background-color: #e5d9b3;
+}
+
+.detalhesExtras[data-type="ghost"] {
+    background-color: #c5b3e5;
+}
+
+.detalhesExtras[data-type="dragon"] {
+    background-color: #c5a6f5;
+}
+
+.detalhesExtras[data-type="dark"] {
+    background-color: #d3c5c5;
+}
+
+.detalhesExtras[data-type="steel"] {
+    background-color: #d4d4e5;
+}
+
+.detalhesExtras[data-type="fairy"] {
+    background-color: #f7d4da;
+}
+
+.detalhesExtras[data-type="normal"] {
+    background-color: #ffffff;
+}

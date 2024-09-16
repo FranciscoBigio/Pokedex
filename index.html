@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="Pokédex_logo.png" alt="Pokédex Logo" class="logo">
+        </header>
+        <div class="boxPkm" id="boxPkm">
+            <div class="infoPkm" id="detalhesPkm">
+                <div class="pokemonImageContainer">
+                    <h2 id="nomePkm">Nome:</h2>
+                    <img id="imagemPkm" src="" alt="Pokémon" />
+                </div>
+                <div class="detalhes">
+                    <p>ID: <span id="idPkm">0</span></p>
+                    <p>Tipo: <span id="tipoPkm">Desconhecido</span></p>
+                    <p>Geração: <span id="geracaoPkm">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div id="detalhesExtras" class="detalhesExtras"></div>
+        <input type="text" id="inputPkm" placeholder="Bote o nome do Pokemon ou seu ID" />
+        <button id="botaoBusca" class="btn">Procure o Pokemon</button>
+        <div class="navigation">
+            <button id="botaoVolta" class="btn">Anterior</button>
+            <button id="botaoProx" class="btn">Próximo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
